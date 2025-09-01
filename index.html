@@ -3,121 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio de Agustín Flores</title>
+  <title>Portfolio - Flores Agustín</title>
   <style>
-    /* ====== ESTILOS BÁSICOS ====== */
+    /* Estilos generales */
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background: #f4f4f9;
+      background: #f9f9f9;
       color: #333;
-    }
-    header {
-      background: #222;
-      color: #fff;
-      padding: 20px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
+
+    h1 {
+      margin-bottom: 20px;
       font-size: 2.5rem;
     }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
+
+    /* Botones */
+    .menu button {
+      background: #333;
       color: #fff;
+      border: none;
+      padding: 12px 24px;
+      margin: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .menu button:hover {
+      background: #555;
+    }
+
+    /* Secciones ocultas */
+    .section {
+      display: none;
+      margin-top: 20px;
+      max-width: 600px;
+    }
+
+    .active {
+      display: block;
+      animation: fadeIn 0.5s;
+    }
+
+    /* Animación */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    /* Links */
+    a {
+      color: #333;
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
     }
-    nav a:hover {
+
+    a:hover {
       text-decoration: underline;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      margin-bottom: 20px;
-      color: #222;
-      border-bottom: 2px solid #222;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-    .proyecto {
-      background: #fff;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
     }
   </style>
 </head>
 <body>
+  <h1>Bienvenido a mi Portfolio</h1>
+  <div class="menu">
+    <button onclick="showSection('sobre')">Sobre mí</button>
+    <button onclick="showSection('proyectos')">Proyectos</button>
+    <button onclick="showSection('contacto')">Contacto</button>
+  </div>
 
-  <!-- ====== HEADER ====== -->
-  <header>
-    <h1>Agustín Flores</h1>
-    <p>Mi portfolio personal con diseños y blog</p>
-    <nav>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-
-  <!-- ====== SOBRE MÍ ====== -->
-  <section id="sobre-mi">
+  <!-- Secciones -->
+  <div id="sobre" class="section">
     <h2>Sobre mí</h2>
-    <p>
-      ¡Hola! Soy Agustín, desarrollador y creador de contenido digital. 
-      Me apasiona el diseño, la programación y construir proyectos que aporten valor.
-    </p>
-  </section>
+    <p>Soy Agustín, apasionado por el diseño y desarrollo web. Me encanta crear proyectos minimalistas y funcionales.</p>
+  </div>
 
-  <!-- ====== PROYECTOS ====== -->
-  <section id="proyectos">
+  <div id="proyectos" class="section">
     <h2>Proyectos</h2>
+    <p>Aquí irán algunos de mis proyectos destacados con enlaces y descripciones.</p>
+  </div>
 
-    <div class="proyecto">
-      <h3>Proyecto 1</h3>
-      <p>Descripción breve de tu primer proyecto destacado.</p>
-      <a href="#">Ver más</a>
-    </div>
-
-    <div class="proyecto">
-      <h3>Proyecto 2</h3>
-      <p>Descripción breve de otro proyecto.</p>
-      <a href="#">Ver más</a>
-    </div>
-  </section>
-
-  <!-- ====== CONTACTO ====== -->
-  <section id="contacto">
+  <div id="contacto" class="section">
     <h2>Contacto</h2>
-    <p>Podés escribirme a: <strong>tuemail@example.com</strong></p>
-    <p>O encontrarme en redes sociales:</p>
-    <ul>
-      <li><a href="https://github.com/FloresAgustin" target="_blank">GitHub</a></li>
-      <li><a href="#">LinkedIn</a></li>
-      <li><a href="#">Twitter</a></li>
-    </ul>
-  </section>
+    <p>Puedes encontrarme en:</p>
+    <p>
+      <a href="https://codepen.io/your-work" target="_blank">Mi CodePen</a> |
+      <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a>
+    </p>
+    <p>Email: <a href="mailto:agusf1753@gmail.com">agusf1753@gmail.com</a></p>
+  </div>
 
-  <!-- ====== FOOTER ====== -->
-  <footer>
-    <p>&copy; 2025 - Hecho por Agustín Flores</p>
-  </footer>
-
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
