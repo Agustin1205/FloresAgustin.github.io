@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Flores Agustín</title>
+  <title>Portfolio - Agustín Flores</title>
   <style>
-    /* Estilos generales */
     body {
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      background: #fdfdfd;
       color: #333;
       margin: 0;
       padding: 0;
@@ -21,32 +20,35 @@
     }
 
     h1 {
-      margin-bottom: 20px;
       font-size: 2.5rem;
+      margin-bottom: 10px;
     }
 
-    /* Botones */
-    .menu button {
-      background: #333;
+    h2 {
+      margin-top: 20px;
+    }
+
+    .menu button, .submenu button {
+      background: #222;
       color: #fff;
       border: none;
       padding: 12px 24px;
       margin: 10px;
-      border-radius: 8px;
+      border-radius: 6px;
       cursor: pointer;
       font-size: 1rem;
       transition: background 0.3s;
     }
 
-    .menu button:hover {
-      background: #555;
+    .menu button:hover, .submenu button:hover {
+      background: #444;
     }
 
-    /* Secciones ocultas */
     .section {
       display: none;
       margin-top: 20px;
-      max-width: 600px;
+      max-width: 700px;
+      text-align: left;
     }
 
     .active {
@@ -54,15 +56,13 @@
       animation: fadeIn 0.5s;
     }
 
-    /* Animación */
     @keyframes fadeIn {
       from {opacity: 0;}
       to {opacity: 1;}
     }
 
-    /* Links */
     a {
-      color: #333;
+      color: #222;
       text-decoration: none;
       font-weight: bold;
     }
@@ -70,32 +70,75 @@
     a:hover {
       text-decoration: underline;
     }
+
+    ul {
+      margin-left: 20px;
+    }
   </style>
 </head>
 <body>
-  <h1>Bienvenido a mi Portfolio</h1>
+  <h1>Agustín Flores</h1>
+  <p>Programación | Diseño | Desarrollo de Videojuegos</p>
+
   <div class="menu">
     <button onclick="showSection('sobre')">Sobre mí</button>
     <button onclick="showSection('proyectos')">Proyectos</button>
     <button onclick="showSection('contacto')">Contacto</button>
   </div>
 
-  <!-- Secciones -->
+  <!-- SOBRE MÍ -->
   <div id="sobre" class="section">
     <h2>Sobre mí</h2>
-    <p>Soy Agustín, apasionado por el diseño y desarrollo web. Me encanta crear proyectos minimalistas y funcionales.</p>
+    <p>Estudiante de la Tecnicatura en Producción de Videojuegos en UTN.  
+    Me especializo en <strong>programación, diseño y desarrollo de videojuegos</strong>, con conocimientos en:</p>
+    <ul>
+      <li><b>Lenguajes:</b> C#, C++, HTML, CSS</li>
+      <li><b>Motores:</b> Unity (2D/3D), Godot, Unreal Engine</li>
+      <li><b>Herramientas:</b> Git, GitHub, Visual Studio, VS Code</li>
+      <li><b>Diseño:</b> UI/UX, web responsivo con HTML y CSS, Canva</li>
+    </ul>
+
+    <h3>Certificaciones</h3>
+    <ul>
+      <li>Godot – Adeamass</li>
+      <li>Unity 2D/3D, C#, C++, Unreal Engine – UTN</li>
+      <li>Front End Development – FreeCodeCamp</li>
+    </ul>
   </div>
 
+  <!-- PROYECTOS -->
   <div id="proyectos" class="section">
     <h2>Proyectos</h2>
-    <p>Aquí irán algunos de mis proyectos destacados con enlaces y descripciones.</p>
+    <p>Selecciona una categoría:</p>
+    <div class="submenu">
+      <button onclick="showSubSection('disenos')">Diseños</button>
+      <button onclick="showSubSection('animaciones')">Animaciones</button>
+      <button onclick="showSubSection('modelos')">Modelos</button>
+    </div>
+
+    <!-- Sub-secciones de proyectos -->
+    <div id="disenos" class="section">
+      <h3>Diseños</h3>
+      <p>Aquí irán tus proyectos de diseño (web, UI/UX, Canva, etc.).</p>
+    </div>
+
+    <div id="animaciones" class="section">
+      <h3>Animaciones</h3>
+      <p>Aquí podrás mostrar tus proyectos de animación (Unity, Godot, etc.).</p>
+    </div>
+
+    <div id="modelos" class="section">
+      <h3>Modelos</h3>
+      <p>Aquí irán tus modelos 3D o cualquier trabajo relacionado.</p>
+    </div>
   </div>
 
+  <!-- CONTACTO -->
   <div id="contacto" class="section">
     <h2>Contacto</h2>
     <p>Puedes encontrarme en:</p>
     <p>
-      <a href="https://codepen.io/your-work" target="_blank">Mi CodePen</a> |
+      <a href="https://codepen.io/your-work" target="_blank">CodePen</a> |
       <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a>
     </p>
     <p>Email: <a href="mailto:agusf1753@gmail.com">agusf1753@gmail.com</a></p>
@@ -105,6 +148,12 @@
     function showSection(id) {
       const sections = document.querySelectorAll('.section');
       sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function showSubSection(id) {
+      const subSections = document.querySelectorAll('#proyectos .section');
+      subSections.forEach(sub => sub.classList.remove('active'));
       document.getElementById(id).classList.add('active');
     }
   </script>
