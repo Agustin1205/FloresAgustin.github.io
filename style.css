@@ -1,0 +1,237 @@
+/* ==============================
+   ESTILOS GENERALES
+============================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #f9fbfd;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* ==============================
+   NAVBAR
+============================== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  z-index: 1000;
+}
+
+nav img {
+  height: 45px;
+}
+
+.nav-buttons button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  margin-left: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.nav-buttons button:hover {
+  color: #0078ff;
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   HERO
+============================== */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #0078ff, #00c6ff);
+  color: white;
+  padding: 20px;
+}
+
+.hero img {
+  width: 130px;
+  margin-bottom: 25px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin: 15px 0;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* ==============================
+   SECCIONES
+============================== */
+.section {
+  display: none;
+  padding: 120px 30px;
+  max-width: 1000px;
+  margin: auto;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.section.active {
+  display: block;
+}
+
+.fade-in {
+  opacity: 1 !important;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #0078ff;
+  display: inline-block;
+  padding-bottom: 8px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.6rem;
+  margin-top: 30px;
+  color: #0078ff;
+}
+
+/* ==============================
+   CARDS
+============================== */
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ==============================
+   LISTAS
+============================== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+
+ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #0078ff;
+  font-weight: bold;
+}
+
+/* ==============================
+   SUBMENÚ DE PROYECTOS
+============================== */
+.submenu {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.submenu button {
+  background: #0078ff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.submenu button:hover {
+  background: #005bb5;
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   CONTACTO
+============================== */
+#contacto a {
+  color: #0078ff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#contacto a:hover {
+  text-decoration: underline;
+  color: #005bb5;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  background: #f1f5f9;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 20px;
+  }
+
+  .nav-buttons button {
+    margin-left: 12px;
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 100px 20px;
+  }
+}

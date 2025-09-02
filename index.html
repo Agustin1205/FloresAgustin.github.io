@@ -6,7 +6,7 @@
   <title>Portfolio - Agustín Flores</title>
   <!-- Fuente moderna -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <!-- Enlace al CSS externo -->
+  <!-- Estilos -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,35 +21,53 @@
   </nav>
 
   <!-- Hero -->
-  <div class="hero">
+  <header class="hero">
     <img src="LOGO.png" alt="Logo Hero">
     <h1>Agustín Flores</h1>
     <p>Programación | Diseño | Desarrollo de Videojuegos</p>
-  </div>
+  </header>
 
   <!-- SOBRE MÍ -->
-  <div id="sobre" class="section active">
+  <section id="sobre" class="section active fade-in">
     <h2>Sobre mí</h2>
-    <p>Soy Agustín Flores, estudiante de la Tecnicatura en Producción de Videojuegos en la UTN, apasionado por la <strong>programación, el diseño y el desarrollo de videojuegos</strong>. Me dedico a crear experiencias interactivas combinando creatividad y tecnología, con habilidades en:</p>
-    <ul>
-      <li><b>Lenguajes:</b> C#, C++, HTML, CSS</li>
-      <li><b>Motores de desarrollo:</b> Unity (2D/3D), Godot, Unreal Engine</li>
-      <li><b>Herramientas:</b> Git, GitHub, Visual Studio, VS Code</li>
-      <li><b>Diseño:</b> UI/UX, desarrollo web responsivo con HTML y CSS, Canva</li>
-    </ul>
+    <div class="card">
+      <p>
+        Soy <strong>Agustín Flores</strong>, estudiante de la Tecnicatura en Producción de Videojuegos en la UTN,
+        apasionado por la <b>programación, el diseño y el desarrollo de videojuegos</b>.
+        Me dedico a crear experiencias interactivas combinando creatividad y tecnología.
+      </p>
+    </div>
 
-    <h3>Certificaciones</h3>
-    <ul>
-      <li>Godot – Adeamass</li>
-      <li>Unity 2D/3D, C#, C++, Unreal Engine – UTN</li>
-      <li>Front End Development – FreeCodeCamp</li>
-    </ul>
+    <div class="card">
+      <h3>Habilidades</h3>
+      <ul>
+        <li><b>Lenguajes:</b> C#, C++, HTML, CSS</li>
+        <li><b>Motores de desarrollo:</b> Unity (2D/3D), Godot, Unreal Engine</li>
+        <li><b>Herramientas:</b> Git, GitHub, Visual Studio, VS Code</li>
+        <li><b>Diseño:</b> UI/UX, desarrollo web responsivo, Canva</li>
+      </ul>
+    </div>
 
-    <p>Mi objetivo es seguir creciendo profesionalmente, trabajando en proyectos innovadores donde pueda combinar <strong>programación, arte y narrativa</strong> para crear videojuegos y experiencias digitales únicas.</p>
-  </div>
+    <div class="card">
+      <h3>Certificaciones</h3>
+      <ul>
+        <li>Godot – Adeamass</li>
+        <li>Unity 2D/3D, C#, C++, Unreal Engine – UTN</li>
+        <li>Front End Development – FreeCodeCamp</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <p>
+        Mi objetivo es seguir creciendo profesionalmente, trabajando en proyectos innovadores
+        donde pueda combinar <b>programación, arte y narrativa</b>
+        para crear videojuegos y experiencias digitales únicas.
+      </p>
+    </div>
+  </section>
 
   <!-- PROYECTOS -->
-  <div id="proyectos" class="section">
+  <section id="proyectos" class="section fade-in">
     <h2>Proyectos</h2>
     <div class="submenu">
       <button onclick="showSubSection('disenos')">Diseños</button>
@@ -58,34 +76,41 @@
     </div>
 
     <!-- Diseños -->
-    <div id="disenos" class="section">
+    <div id="disenos" class="subsection active card">
       <h3>Diseños</h3>
-      <p>Próximamente, Agustín Flores mostrará aquí sus proyectos de diseño.</p>
+      <p>Próximamente, <strong>Agustín Flores</strong> mostrará aquí sus proyectos de diseño.</p>
     </div>
 
     <!-- Animaciones -->
-    <div id="animaciones" class="section">
+    <div id="animaciones" class="subsection card">
       <h3>Animaciones</h3>
-      <p>Próximamente, Agustín Flores compartirá aquí sus animaciones.</p>
+      <p>Próximamente, <strong>Agustín Flores</strong> compartirá aquí sus animaciones.</p>
     </div>
 
     <!-- Modelos -->
-    <div id="modelos" class="section">
+    <div id="modelos" class="subsection card">
       <h3>Modelos</h3>
-      <p>Próximamente, Agustín Flores publicará aquí sus modelos 3D.</p>
+      <p>Próximamente, <strong>Agustín Flores</strong> publicará aquí sus modelos 3D.</p>
     </div>
-  </div>
+  </section>
 
   <!-- CONTACTO -->
-  <div id="contacto" class="section">
+  <section id="contacto" class="section fade-in">
     <h2>Contacto</h2>
-    <p>Puedes encontrar a Agustín Flores en:</p>
-    <p>
-      <a href="https://codepen.io/your-work" target="_blank">CodePen</a> |
-      <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a>
-    </p>
-    <p>Email: <a href="mailto:agusf1753@gmail.com">agusf1753@gmail.com</a></p>
-  </div>
+    <div class="card">
+      <p>Puedes encontrar a <strong>Agustín Flores</strong> en:</p>
+      <p>
+        <a href="https://codepen.io/your-work" target="_blank">🌐 CodePen</a> |
+        <a href="https://www.linkedin.com/feed/" target="_blank">💼 LinkedIn</a>
+      </p>
+      <p>Email: <a href="mailto:agusf1753@gmail.com">agusf1753@gmail.com</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Agustín Flores | Portfolio</p>
+  </footer>
 
   <!-- Script -->
   <script>
@@ -93,10 +118,13 @@
       const sections = document.querySelectorAll('.section');
       sections.forEach(section => section.classList.remove('active'));
       document.getElementById(id).classList.add('active');
+      // animación
+      sections.forEach(sec => sec.classList.remove('fade-in'));
+      document.getElementById(id).classList.add('fade-in');
     }
 
     function showSubSection(id) {
-      const subSections = document.querySelectorAll('#proyectos .section');
+      const subSections = document.querySelectorAll('#proyectos .subsection');
       subSections.forEach(sub => sub.classList.remove('active'));
       document.getElementById(id).classList.add('active');
     }
