@@ -3,131 +3,179 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Agustín Flores</title>
-  <!-- Fuente moderna -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <!-- Estilos -->
+  <title>Portafolio de Agustín Flores</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+  <!-- AOS Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav>
-    <img src="LOGO.png" alt="Logo AF">
-    <div class="nav-buttons">
-      <button onclick="showSection('sobre')">Sobre mí</button>
-      <button onclick="showSection('proyectos')">Proyectos</button>
-      <button onclick="showSection('contacto')">Contacto</button>
-    </div>
-  </nav>
 
-  <!-- Hero -->
-  <header class="hero">
-    <img src="LOGO.png" alt="Logo Hero">
-    <h1>Agustín Flores</h1>
-    <p>Programación | Diseño | Desarrollo de Videojuegos</p>
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="logo">
+      <h1 id="typing-logo"></h1>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+        <li class="dropdown mega">
+          <a href="#" class="nav-link">Proyectos</a>
+          <div class="mega-menu">
+            <ul>
+              <li><a href="#disenos" class="nav-link">Diseños</a></li>
+              <li><a href="#animaciones" class="nav-link">Animaciones</a></li>
+              <li><a href="#guiones" class="nav-link">Guiones</a></li>
+              <li><a href="#modelos" class="nav-link">Modelos</a></li>
+              <li><a href="https://agus-1753.itch.io/" target="_blank" rel="noopener noreferrer">Juegos</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
   </header>
 
-  <!-- SOBRE MÍ -->
-  <section id="sobre" class="section active fade-in">
-    <h2>Sobre mí</h2>
-    <div class="card">
-      <p>
-        Soy <strong>Agustín Flores</strong>, estudiante de la Tecnicatura en Producción de Videojuegos en la UTN,
-        apasionado por la <b>programación, el diseño y el desarrollo de videojuegos</b>.
-        Me dedico a crear experiencias interactivas combinando creatividad y tecnología.
-      </p>
-    </div>
+  <!-- CONTENIDO -->
+  <main class="main-content">
+    <section id="sobre-mi" class="content-section active" data-aos="fade-up">
+      <h2>Estudiante de Producción de Videojuegos - UTN</h2>
+      <div class="bio-content">
+        <div class="bio-section" data-aos="fade-right">
+          <h3>Sobre mí</h3>
+          <p>Soy Agustín Flores, estudiante de la Tecnicatura en Producción de Videojuegos en la UTN, apasionado por la programación, el diseño y el desarrollo de videojuegos. Me dedico a crear experiencias interactivas combinando creatividad y tecnología.</p>
+        </div>
+        <div class="bio-section" data-aos="fade-left">
+          <h3>Habilidades</h3>
+          <ul>
+            <li><p><strong>Lenguajes:</strong> C#, C++, HTML, CSS</p></li>
+            <li><p><strong>Motores:</strong> Unity, Godot, Unreal Engine</p></li>
+            <li><p><strong>Herramientas:</strong> Git, GitHub, Visual Studio, VS Code</p></li>
+            <li><p><strong>Diseño:</strong> UI/UX, Web responsivo, Canva</p></li>
+          </ul>
+        </div>
+        <div class="bio-section" data-aos="fade-up">
+          <h3>Certificaciones</h3>
+          <ul>
+            <li><p><strong>Godot</strong> – Adeamass</p></li>
+            <li><p><strong>Unity, C#, C++, Unreal Engine</strong> – UTN</p></li>
+            <li><p><strong>Front End Development</strong> – FreeCodeCamp</p></li>
+          </ul>
+        </div>
+        <div class="bio-section" data-aos="fade-up">
+          <h3>Mi Objetivo</h3>
+          <p>Seguir creciendo profesionalmente, trabajando en proyectos innovadores donde pueda combinar programación, arte y narrativa.</p>
+        </div>
+      </div>
+    </section>
 
-    <div class="card">
-      <h3>Habilidades</h3>
-      <ul>
-        <li><b>Lenguajes:</b> C#, C++, HTML, CSS</li>
-        <li><b>Motores de desarrollo:</b> Unity (2D/3D), Godot, Unreal Engine</li>
-        <li><b>Herramientas:</b> Git, GitHub, Visual Studio, VS Code</li>
-        <li><b>Diseño:</b> UI/UX, desarrollo web responsivo, Canva</li>
-      </ul>
-    </div>
+    <!-- Proyectos -->
+    <section id="disenos" class="portfolio-section content-section" data-aos="fade-up">
+      <h2>Diseños</h2>
+      <div class="card-grid">
+        <div class="card"> <h3>Proyecto 1</h3> <p>Pendiente</p> </div>
+        <div class="card"> <h3>Proyecto 2</h3> <p>Pendiente</p> </div>
+      </div>
+    </section>
 
-    <div class="card">
-      <h3>Certificaciones</h3>
-      <ul>
-        <li>Godot – Adeamass</li>
-        <li>Unity 2D/3D, C#, C++, Unreal Engine – UTN</li>
-        <li>Front End Development – FreeCodeCamp</li>
-      </ul>
-    </div>
+    <section id="animaciones" class="portfolio-section content-section" data-aos="fade-up">
+      <h2>Animaciones</h2>
+      <div class="card-grid">
+        <div class="card"> <h3>Proyecto 1</h3> <p>Pendiente</p> </div>
+      </div>
+    </section>
 
-    <div class="card">
-      <p>
-        Mi objetivo es seguir creciendo profesionalmente, trabajando en proyectos innovadores
-        donde pueda combinar <b>programación, arte y narrativa</b>
-        para crear videojuegos y experiencias digitales únicas.
-      </p>
-    </div>
-  </section>
+    <section id="guiones" class="portfolio-section content-section" data-aos="fade-up">
+      <h2>Guiones</h2>
+      <div class="card-grid">
+        <div class="card"> <h3>Proyecto 1</h3> <p>Pendiente</p> </div>
+      </div>
+    </section>
 
-  <!-- PROYECTOS -->
-  <section id="proyectos" class="section fade-in">
-    <h2>Proyectos</h2>
-    <div class="submenu">
-      <button onclick="showSubSection('disenos')">Diseños</button>
-      <button onclick="showSubSection('animaciones')">Animaciones</button>
-      <button onclick="showSubSection('modelos')">Modelos</button>
-    </div>
+    <section id="modelos" class="portfolio-section content-section" data-aos="fade-up">
+      <h2>Modelos</h2>
+      <div class="card-grid">
+        <div class="card"> <h3>Proyecto 1</h3> <p>Pendiente</p> </div>
+      </div>
+    </section>
 
-    <!-- Diseños -->
-    <div id="disenos" class="subsection active card">
-      <h3>Diseños</h3>
-      <p>Próximamente, <strong>Agustín Flores</strong> mostrará aquí sus proyectos de diseño.</p>
-    </div>
+    <!-- Contacto -->
+    <section id="contacto" class="content-section" data-aos="fade-up">
+      <h2>Contacto</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <textarea name="message" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <p id="form-status"></p>
+    </section>
+  </main>
 
-    <!-- Animaciones -->
-    <div id="animaciones" class="subsection card">
-      <h3>Animaciones</h3>
-      <p>Próximamente, <strong>Agustín Flores</strong> compartirá aquí sus animaciones.</p>
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-links">
+      <a href="https://codepen.io/your-work" target="_blank"><i class="fab fa-codepen"></i></a>
+      <a href="https://www.linkedin.com/in/agustin-flores-30970528a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://x.com/Agustin16358818" target="_blank"><i class="fab fa-twitter"></i></a>
     </div>
-
-    <!-- Modelos -->
-    <div id="modelos" class="subsection card">
-      <h3>Modelos</h3>
-      <p>Próximamente, <strong>Agustín Flores</strong> publicará aquí sus modelos 3D.</p>
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section id="contacto" class="section fade-in">
-    <h2>Contacto</h2>
-    <div class="card">
-      <p>Puedes encontrar a <strong>Agustín Flores</strong> en:</p>
-      <p>
-        <a href="https://codepen.io/your-work" target="_blank">🌐 CodePen</a> |
-        <a href="https://www.linkedin.com/feed/" target="_blank">💼 LinkedIn</a>
-      </p>
-      <p>Email: <a href="mailto:agusf1753@gmail.com">agusf1753@gmail.com</a></p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Agustín Flores | Portfolio</p>
+    <p>&copy; 2025 - Portafolio de Agustín Flores</p>
   </footer>
 
-  <!-- Script -->
-  <script>
-    function showSection(id) {
-      const sections = document.querySelectorAll('.section');
-      sections.forEach(section => section.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-      // animación
-      sections.forEach(sec => sec.classList.remove('fade-in'));
-      document.getElementById(id).classList.add('fade-in');
-    }
-
-    function showSubSection(id) {
-      const subSections = document.querySelectorAll('#proyectos .subsection');
-      subSections.forEach(sub => sub.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+<!-- AOS Animations -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+...
+
+<main class="main-content">
+  <section id="sobre-mi" class="content-section active" data-aos="fade-up">
+    <h2 data-aos="zoom-in">Estudiante de Producción de Videojuegos - UTN</h2>
+    <div class="bio-content">
+      <div class="bio-section" data-aos="fade-right">
+        <h3>Sobre mí</h3>
+        <p>...</p>
+      </div>
+      <div class="bio-section" data-aos="fade-left">
+        <h3>Habilidades</h3>
+        ...
+      </div>
+      <div class="bio-section" data-aos="flip-up">
+        <h3>Certificaciones</h3>
+        ...
+      </div>
+      <div class="bio-section" data-aos="zoom-in-up">
+        <h3>Mi Objetivo</h3>
+        <p>...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cards con animación -->
+  <section id="disenos" class="portfolio-section content-section" data-aos="fade-up">
+    <h2 data-aos="zoom-in">Diseños</h2>
+    <div class="card-grid">
+      <div class="card" data-aos="flip-left"> <h3>Proyecto 1</h3> <p>Pendiente</p> </div>
+      <div class="card" data-aos="flip-left" data-aos-delay="200"> <h3>Proyecto 2</h3> <p>Pendiente</p> </div>
+    </div>
+  </section>
+
+  <!-- Formulario con animaciones -->
+  <section id="contacto" class="content-section" data-aos="fade-up">
+    <h2 data-aos="zoom-in">Contacto</h2>
+    <form id="contact-form" data-aos="fade-up" data-aos-delay="200">
+      <input type="text" name="name" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <textarea name="message" placeholder="Tu mensaje" required></textarea>
+      <button type="submit" data-aos="zoom-in" data-aos-delay="300">Enviar</button>
+    </form>
+    <p id="form-status"></p>
+  </section>
+</main>
